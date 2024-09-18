@@ -2,7 +2,8 @@ def chatbot_response(user_input):
     responses = {
         "hi": "Hello! How can I help you?",
         "bye": "Goodbye! Have a nice day!",
-        "how are you": "I'm just a bunch of code, but I'm doing well!"
+        "how are you": "I'm just a bunch of code, but I'm doing well!",
+        "what is the earth's largest ocean?: "The pacific ocean"
     }
     for key in responses.keys():
         if key in user_input.lower():
