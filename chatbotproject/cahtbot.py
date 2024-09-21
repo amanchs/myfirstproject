@@ -1,18 +1,20 @@
-def chatbot_response(user_input):
-    responses = {
-        "hi": "Hello! How can I help you?",
-        "bye": "Goodbye! Have a nice day!",
-        "how are you": "I'm just a bunch of code, but I'm doing well!",
-        "what is the earth's largest ocean?: "The pacific ocean"
-    }
-    for key in responses.keys():
-        if key in user_input.lower():
-            return responses[key]
-    return "Sorry, I don't understand that."
-
+import time
+now = time.ctime()
+qna = {
+    "hi" :"hello",
+    "how are you?" : "I am fine.",
+    "what is your name" : "I am Chatbot of I-tech.",
+    "how old are you?" : "I am 3days old",
+    "what is the shape of the Earth" : "The Earth is approximately a sphere.",
+    "what is the capital of India" : "New Delhi",
+    "what is the capital of USA?" : "Washinton D.C.",
+    "wealthiest counntry in the world" : "Luxembourg is the world's wealthiest country, with a GDP per capita of $143,742 thousand, according to the IMF.",
+    "what is the time right now?" : now,
+}
 
 while True:
-    user_input = input("You: ")
-    if user_input.lower() == "exit":
+    qs = input()
+    if (qs == "quit"):
         break
-    print("Chatbot:", chatbot_response(user_input))
+    else:
+        print(qna[qs])
